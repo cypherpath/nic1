@@ -1,0 +1,11 @@
+__pycache__
+venv
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.swn
+*.txt
+*.iso
+*.qcow2
+*.json
