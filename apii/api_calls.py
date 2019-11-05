@@ -52,5 +52,6 @@ CALLS = {
     "add_service":              Call("sdis/{sdi_id}/networks/{network_id}/services", Method.POST, "vid"),
     "edit_service":             Call("sdis/{sdi_id}/networks/{network_id}/services/{vid}", Method.PUT, "vid", "ip", "netmask",
                                      "dhcp", "dns", "defaultgateway", "ipv6", "slaac", "defaultgatewayv6"),
-    "delete_service":           Call("sdis/{sdi_id}/networks/{network_id}/services/{vid}", Method.DELETE)
+    "delete_service":           Call("sdis/{sdi_id}/networks/{network_id}/services/{vid}", Method.DELETE),
+    "storage_general":          Call("storage/general", Method.GET)
 }

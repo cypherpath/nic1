@@ -42,6 +42,7 @@ class Authorizer:
         """
         try:
             self.__tokens = self.__session.fetch_token(token_url=self.__domain, verify=settings.SDIOS_VERIFY_SSL,
+                                                       tenancy=self.__credentials["tenancy"],
                                                        username=self.__credentials["username"],
                                                        password=self.__credentials["password"],
                                                        client_id=self.__credentials["client_id"],

@@ -19,6 +19,7 @@ SDIOS_VERIFY_SSL = False
 
 ### SDI OS Super user API credentials
 SDIOS_CREDS = {
+    "tenancy": "",
     "username": "",
     "password": "",
     "client_id": "",

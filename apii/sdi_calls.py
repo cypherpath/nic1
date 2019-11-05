@@ -15,7 +15,7 @@ class SDICalls:
         """
         self.__caller = caller
         self.__machine_calls = MachineCalls(caller)
-        self.__known_calls = ["get_users", "get_sdis", "create_sdi", "edit_sdi", "run_sdi", "configure_sdi"]
+        self.__known_calls = ["storage_general", "get_users", "get_sdis", "create_sdi", "edit_sdi", "run_sdi", "configure_sdi"]
 
     def get_sdi_id(self) -> str:
         return self.__machine_calls.get_sdi_id()

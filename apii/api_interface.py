@@ -38,11 +38,16 @@ class APIInterface:
         Start method to prepare an SDI. Gets the user defined by the username argument, then creates an SDI based on
         previously-generated runs.
         """
-        users = self.__make_call("get_users") or []
-        user_pk = 0  # Initial value always overwritten, as the user was authorized.
-        for user in users:
-            if user["username"] == username:
-                user_pk = user["pk"]
+        users = self.__make_call("storage_general")
+        if len(users) == 1:
+            user_pk = users[0]["user"]
+        else:
+            users = self.__make_call("get_users")
+            user_pk = 0  # Initial value always overwritten, as the user was authorized.
+            for user in users:
+                if user["username"] == username:
+                    user_pk = user["pk"]
+                    break
         sdis = self.__make_call("get_sdis", {"user_pk": user_pk}) or []
         sdi_num = 0
         for sdi in sdis:
